@@ -7,8 +7,8 @@ def is_balanced(s):
         if(s.find(")")<s.find("(")):
             return False
         elif(s.find(")") < 1+s[s.find("(")+1:].find("(")):
-            return is_balanced(s[s.find(")")+1:])
+            return is_balanced(s[s.find(")")+1:]) 
         else:
-            return is_balanced(s[s.find("(")+1:s.rfind(")")])
+            return is_balanced(s[s.find("(")+1:s.rfind(")")]) 
 
-print(is_balanced("(()())"))
+print(is_balanced("(()())()())"))

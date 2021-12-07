@@ -19,7 +19,7 @@ MM = np.array([[0,0,1,0,2],[1,0,2,3,4],[3,0,4,2,1],[1,0,1,1,2]])
 
 
 # To obtain a list of lists from the array M, we use .tolist()
-M_listoflists = MM.tolist() 
+M_listoflists = MM.tolist()
 
 print(M_listoflists) #[[1, -2, 3], [3, 10, 1], [1, 5, 3]]
 
@@ -89,12 +89,12 @@ def forward_step(M):
         print(f"Adding row {r} to rows below it to eliminate coefficients in column {get_lead_ind(M[r])}")
         print("The matrix is currently:")
         print_matrix(M)
-    print("================================================================================")   
+    print("================================================================================")
     print("Done with the forward step")
     print("The matrix is currently:")
     print_matrix(M)
 def backward_step(M):
-    print("================================================================================")   
+    print("================================================================================")
     print("Now performing the backward step")
     for r in range (len(M)-1, -1, -1):
         eliminate1(M, r, r)
@@ -106,7 +106,7 @@ def backward_step(M):
     print("The matrix is currently:")
     deviding(M)
     print_matrix(M)
-    
+
 forward_step(M_listoflists)
 backward_step(M_listoflists)
 
@@ -120,10 +120,10 @@ print("\n\n\n---------CUT----------\n\n\n")
 
 MMM = np.array([[1,-2,3],[3,10,1],[1,5,3]])
 x = np.array([75,10,-11])
-MMMM=MMM.tolist() 
+MMMM=MMM.tolist()
 forward_step(MMMM)
 backward_step(MMMM)
 MMM = np.array(MMMM)
-b = np.matmul(MMM,x)   
+b = np.matmul(MMM,x)
 print_matrix(b.tolist())
 """
